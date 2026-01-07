@@ -105,7 +105,7 @@ const Navbar = () => {
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Instagram size={18} />, url: 'https://www.instagram.com/tigratech0', label: 'Instagram', hover: 'hover:text-pink-500' },
+    { icon: <Instagram size={18} />, url: 'https://www.instagram.com/tigratechs', label: 'Instagram', hover: 'hover:text-pink-500' },
     { icon: <Facebook size={18} />, url: 'https://www.facebook.com/tigratechs', label: 'Facebook', hover: 'hover:text-blue-600' },
     { icon: <Music2 size={18} />, url: 'https://tiktok.com', label: 'TikTok', hover: 'hover:text-cyan-400' },
     { icon: <MessageCircle size={18} />, url: 'https://wa.me', label: 'WhatsApp', hover: 'hover:text-green-500' },
