@@ -27,7 +27,7 @@ export const AdminDashboard = () => {
     date: new Date().toISOString().split('T')[0], // Blog only
     imageUrl: 'picsum.photos',
     liveUrl: '#',    // Project only
-    githubUrl: '',   // Project only
+    repoUrl: '',   // Project only
     featured: false  // Project only
   });
 
@@ -54,7 +54,7 @@ export const AdminDashboard = () => {
       clientType: ClientType.EXTERNAL, author: '', 
       date: new Date().toISOString().split('T')[0],
       imageUrl: 'picsum.photos',
-      liveUrl: '#', githubUrl: '', featured: false
+      liveUrl: '#', repoUrl: '', featured: false
     });
   };
 
@@ -85,7 +85,7 @@ export const AdminDashboard = () => {
         imageUrl: formData.imageUrl,
         featured: formData.featured,
         liveUrl: formData.liveUrl,
-        githubUrl: formData.githubUrl
+        repoUrl: formData.repoUrl
       };
       await dbService.saveProject(projectPayload);
     } else {
@@ -237,7 +237,7 @@ export const AdminDashboard = () => {
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black text-gray-500 uppercase tracking-widest">GitHub Repository URL</label>
-                    <input value={formData.githubUrl} onChange={e => setFormData({...formData, githubUrl: e.target.value})} className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none focus:border-blue-500" />
+                    <input value={formData.repoUrl} onChange={e => setFormData({...formData, repoUrl: e.target.value})} className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none focus:border-blue-500" />
                   </div>
                 </div>
               )}
