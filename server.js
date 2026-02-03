@@ -21,6 +21,8 @@ const PORT = process.env.PORT || 10000;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // --- Allowed columns mapping ---
 const tableColumns = {
   projects: ['id','title','description','techStack','imageUrl','featured', 'clientType','liveUrl','repoUrl'],
