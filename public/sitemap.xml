@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <url>
-       <loc>https://tigra-tech.onrender.com/</loc>
-       <lastmod>2026-02-03T06:51:29+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
-  </url>
+<url>
+  <loc>https://taigra-nexus-lab.onrender.com/</loc>
+  <loc>https://taigra-nexus-lab.onrender.com/#/about</loc>
+  <loc>https://taigra-nexus-lab.onrender.com/#/services</loc>
+  <loc>https://taigra-nexus-lab.onrender.com/#/projects</loc>
+  <loc>https://taigra-nexus-lab.onrender.com/#/blogs</loc>
+  <loc>https://taigra-nexus-lab.onrender.com/#/contact</loc>
+
+  <lastmod>2026-02-13T12:33:09+00:00</lastmod>
+</url>
+
+
 </urlset>
