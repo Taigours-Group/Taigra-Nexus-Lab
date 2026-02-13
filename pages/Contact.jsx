@@ -20,7 +20,7 @@ export const Contact = () => {
 
     // 2. Format the WhatsApp message
     const phoneNumber = "9779766115626"; // International format without '+'
-    const whatsappMessage = `*New TigraTech Inquiry From Web*%0A%0A` +
+    const whatsappMessage = `*New Taigra Nexus Lab Inquiry From Web*%0A%0A` +
       `*Name:* ${data.fullName}%0A` +
       `*Email:* ${data.workEmail}%0A` +
       `*Org:* ${data.organization}%0A` +
@@ -63,7 +63,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">Email</p>
-                  <p className="text-white text-lg">tigratechs@gmail.com</p>
+                  <p className="text-white text-lg">Taigra Nexus Labs@gmail.com</p>
                 </div>
               </div>
               <div className="flex gap-6 items-center">

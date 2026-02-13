@@ -25,7 +25,7 @@ export const About = () => {
             Digital Architects for <br /> <span className="text-blue-600">The Taigours Dynasty.</span>
           </motion.h1>
           <p className="text-xl text-gray-400 text-center max-w-3xl mx-auto leading-relaxed">
-            Founded as the central nervous system of TGO, TigraTech Pvt. Ltd has evolved into a powerhouse of digital innovation, managing billions of data points daily.
+            Founded as the central nervous system of TGO, Taigra Nexus Lab Pvt. Ltd has evolved into a powerhouse of digital innovation, managing billions of data points daily.
           </p>
         </div>
       </section>

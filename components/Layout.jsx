@@ -98,8 +98,8 @@ const Navbar = () => {
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Instagram size={18} />, url: 'https://www.instagram.com/tigratechs', label: 'Instagram', hover: 'hover:text-pink-500' },
-    { icon: <Facebook size={18} />, url: 'https://www.facebook.com/tigratechs', label: 'Facebook', hover: 'hover:text-blue-600' },
+    { icon: <Instagram size={18} />, url: 'https://www.instagram.com/Taigra Nexus Labs', label: 'Instagram', hover: 'hover:text-pink-500' },
+    { icon: <Facebook size={18} />, url: 'https://www.facebook.com/Taigra Nexus Labs', label: 'Facebook', hover: 'hover:text-blue-600' },
     { icon: <Music2 size={18} />, url: 'https://tiktok.com', label: 'TikTok', hover: 'hover:text-cyan-400' },
     { icon: <MessageCircle size={18} />, url: 'https://wa.me', label: 'WhatsApp', hover: 'hover:text-green-500' },
   ];
@@ -176,7 +176,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-gray-500 text-xs md:text-sm text-center gap-4">
-          <p>&copy; 2026 TigraTech Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; 2026 Taigra Nexus Lab Pvt. Ltd. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="/privacy-policy.html" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms-of-service.html" className="hover:text-white transition-colors">Terms of Service</a>

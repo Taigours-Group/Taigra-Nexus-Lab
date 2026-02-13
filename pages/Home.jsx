@@ -21,7 +21,7 @@ const Hero = () => (
         Building the Digital <br className="hidden md:block" /> Backbone <span className="text-blue-500">of Global Enterprises.</span>
       </motion.h1>
       <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
-        TigraTech engineers high-performance software, automation, and digital ecosystems for the TGO conglomerate and its global partners.
+        Taigra Nexus Lab engineers high-performance software, automation, and digital ecosystems for the TGO conglomerate and its global partners.
       </motion.p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link to="/projects" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-blue-500/20">
@@ -58,7 +58,7 @@ const TGOSection = () => (
           </div>
         </div>
         <div className="relative">
-          <img src="https://picsum.photos/seed/office/800/600" alt="TigraTech Hub" className="rounded-2xl md:rounded-3xl shadow-2xl grayscale w-full" />
+          <img src="https://picsum.photos/seed/office/800/600" alt="Taigra Nexus Lab Hub" className="rounded-2xl md:rounded-3xl shadow-2xl grayscale w-full" />
         </div>
       </div>
     </div>
