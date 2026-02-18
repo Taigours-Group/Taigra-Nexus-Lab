@@ -88,7 +88,7 @@ export const Projects = () => {
           ))}
         </div>
 
-        <div className="grid m-5 mb-24 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid m-5 mb-24 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           {filteredProjects.map((project, idx) => (
             <motion.div
               key={project.id || idx} // Fallback to idx if id is missing
@@ -101,26 +101,26 @@ export const Projects = () => {
                 <img 
                   src={project.imageUrl} 
                   alt={project.title} 
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60"></div>
                 <div className="absolute bottom-3 left-3">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+                  <span className="text-[6px] md:text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
                     {project.clientType}
                   </span>
                 </div>
               </div>
-              <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <h3 className="text-xl md:text-2xl font-bold mb-3 text-white group-hover:text-blue-500 transition-colors">
+              <div className="p-2 md:p-8 flex flex-col flex-grow">
+                <h3 className="text-[13px] md:text-2xl font-bold mb-1 text-white group-hover:text-blue-500 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-6 text-sm line-clamp-3 leading-relaxed">
+                <p className="text-gray-400 mb-5 text-[8px] md:text-sm line-clamp-3 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="mt-auto">
                   <div className="flex flex-wrap gap-1.5 mb-6">
                     {project.techStack?.map(tech => (
-                      <span key={tech} className="text-[9px] md:text-[10px] bg-white/5 px-2 py-1 rounded text-gray-400 border border-white/10 font-medium">
+                      <span key={tech} className="text-[7px] md:text-[10px] md:px-2 bg-white/5 px-1 py-1 rounded text-gray-400 border border-white/10 font-medium">
                         {tech}
                       </span>
                     ))}
@@ -129,11 +129,6 @@ export const Projects = () => {
                     {project.liveUrl && (
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 bg-white text-black py-2.5 md:py-3 rounded-lg md:rounded-xl font-bold text-center text-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors active:scale-95">
                         <ExternalLink className="w-4 h-4" /> Live Demo
-                      </a>
-                    )}
-                    {project.repoUrl && (
-                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="p-2.5 md:p-3 bg-white/5 border border-white/10 rounded-lg md:rounded-xl hover:bg-white/10 transition-colors active:scale-95">
-                        <GithubIcon className="w-5 h-5 text-white" />
                       </a>
                     )}
                   </div>
