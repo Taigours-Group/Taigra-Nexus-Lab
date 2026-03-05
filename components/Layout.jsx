@@ -7,7 +7,6 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import { BRAND_NAME } from '../constants.js';
 import { Tutorial } from './Tutorial.jsx';
-import Logo from 'https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -27,8 +26,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className={`p-1.5 md:p-2 rounded-lg transition-transform`} style={{ backgroundColor: '#1b213bff' }}>
-              <img src={Logo} alt="" className="w-6 h-6 md:w-8 md:h-8" />
+            <div className={`rounded-lg transition-transform`} style={{ backgroundColor: '#1b213bff' }}>
+              <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png" alt="" className="w-6 h-6 md:w-8 md:h-8 rounded-md" />
             </div>
             <span className="text-lg md:text-xl font-bold tracking-tight text-white">{BRAND_NAME}</span>
           </Link>
@@ -45,6 +44,13 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <Link 
+              id="admin-btn"
+              to="/admin" 
+              className="text-sm bg-white/5 border border-white/10 px-4 py-2 rounded-full hover:bg-white/10 transition-colors text-white"
+            >
+              Admin
+            </Link>
           </div>
 
           <div className="md:hidden">
@@ -98,8 +104,8 @@ const Navbar = () => {
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Instagram size={18} />, url: 'https://www.instagram.com/taigranexuslabs', label: 'Instagram', hover: 'hover:text-pink-500' },
-    { icon: <Facebook size={18} />, url: 'https://www.facebook.com/TaigraNexusLabs', label: 'Facebook', hover: 'hover:text-blue-600' },
+    { icon: <Instagram size={18} />, url: 'https://www.instagram.com/tigratech0', label: 'Instagram', hover: 'hover:text-pink-500' },
+    { icon: <Facebook size={18} />, url: 'https://www.facebook.com/tigratechs', label: 'Facebook', hover: 'hover:text-blue-600' },
     { icon: <Music2 size={18} />, url: 'https://tiktok.com', label: 'TikTok', hover: 'hover:text-cyan-400' },
     { icon: <MessageCircle size={18} />, url: 'https://wa.me', label: 'WhatsApp', hover: 'hover:text-green-500' },
   ];
@@ -111,8 +117,8 @@ const Footer = () => {
           {/* Brand and Socials */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="p-1.5 rounded-md" style={{ backgroundColor: '#1b213bff' }}>
-                <img src={Logo} alt="" className="w-5 h-5 md:w-7 md:h-7" />
+              <div className=" rounded-md" style={{ backgroundColor: '#1b213bff' }}>
+                <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png" alt="" className="w-5 h-5 md:w-7 md:h-7 rounded-md" />
               </div>
               <span className="text-xl font-bold text-white">{BRAND_NAME}</span>
             </Link>
@@ -176,7 +182,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-gray-500 text-xs md:text-sm text-center gap-4">
-          <p>&copy; 2026 Taigra Nexus Labs Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; 2026 TigraTech Pvt. Ltd. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="/privacy-policy.html" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms-of-service.html" className="hover:text-white transition-colors">Terms of Service</a>
