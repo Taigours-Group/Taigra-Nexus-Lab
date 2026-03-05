@@ -2,16 +2,16 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Taigra Nexus Lab Pvt. Ltd. – Legal Pages
+# Taigra Nexus Labs Pvt. Ltd. – Legal Pages
 
-Official **Privacy Policy** and **Terms of Service** HTML pages for **Taigra Nexus Lab Pvt. Ltd.**  
+Official **Privacy Policy** and **Terms of Service** HTML pages for **Taigra Nexus Labs Pvt. Ltd.**  
 Built clean. Styled dark. Ready for production.
 
 ---
 
-## 🚀 About Taigra Nexus Lab
+## 🚀 About Taigra Nexus Labs
 
-**Taigra Nexus Lab Pvt. Ltd.** is the technology backbone of **TGO (Taigours Group of Organization)**.  
+**Taigra Nexus Labs Pvt. Ltd.** is the technology backbone of **TGO (Taigours Group of Organization)**.  
 We design, build, and maintain digital systems, software, and web platforms for TGO and its child companies — with a focus on performance, security, and scalability.
 
 This repository contains our **legal compliance pages**, crafted to meet startup, client, and platform requirements.
@@ -36,7 +36,7 @@ Both pages are:
 
 ## 🎨 Design Philosophy
 
-- Dark theme with gold accents (Taigra Nexus Lab brand vibe)
+- Dark theme with gold accents (Taigra Nexus Labs brand vibe)
 - Minimal, readable, and distraction-free
 - No external dependencies
 - Fast loading and SEO-friendly

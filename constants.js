@@ -1,11 +1,11 @@
-export const BRAND_NAME = "Taigra Nexus Lab";
+export const BRAND_NAME = "Taigra Nexus Labs";
 export const PARENT_COMPANY = "Taigours Group of Organization (TGO)";
 export const ACCENT_COLOR = "blue-600";
 
 export const TUTORIAL_STEPS = [
   {
     target: 'hero',
-    title: 'Welcome to Taigra Nexus Lab',
+    title: 'Welcome to Taigra Nexus Labs',
     content: `We are the specialized tech arm of ${PARENT_COMPANY}. Our mission is to build the digital backbone for the entire group.`,
     position: 'bottom'
   },

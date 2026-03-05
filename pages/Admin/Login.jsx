@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Terminal, Lock, User } from 'lucide-react';
 import { dbService } from '../../services/dbService.js';
-import Logo from '../../components/logo.png';
+import Logo from 'https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png';
 
 export const AdminLogin = () => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ export const AdminLogin = () => {
         <div className="text-center mb-10">
           <div className="inline-flex bg-blue-600 rounded-2xl mb-6 shadow-xl shadow-blue-500/20">
            <div className={`p-1.5 md:p-2 rounded-lg  transition-transform`} style={{ backgroundColor: '#1b213bff' }}>
-             <img src={Logo} alt="Taigra Nexus Lab Logo" className="w-10 h-10" />
+             <img src={Logo} alt="Taigra Nexus Labs Logo" className="w-10 h-10" />
             </div>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">TigraAdmin Access</h1>
