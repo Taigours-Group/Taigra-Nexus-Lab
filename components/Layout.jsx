@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  Menu, X, ArrowRight, 
-  Instagram, Facebook, MessageCircle, Music2, Star 
+  Menu, X, ArrowRight, Star 
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BRAND_NAME } from '../constants.js';
 import { Tutorial } from './Tutorial.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -104,10 +105,10 @@ const Navbar = () => {
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Instagram size={18} />, url: 'https://www.instagram.com/tigratech0', label: 'Instagram', hover: 'hover:text-pink-500' },
-    { icon: <Facebook size={18} />, url: 'https://www.facebook.com/tigratechs', label: 'Facebook', hover: 'hover:text-blue-600' },
-    { icon: <Music2 size={18} />, url: 'https://tiktok.com', label: 'TikTok', hover: 'hover:text-cyan-400' },
-    { icon: <MessageCircle size={18} />, url: 'https://wa.me', label: 'WhatsApp', hover: 'hover:text-green-500' },
+    { icon: <FontAwesomeIcon icon={faInstagram} size={18} />, url: 'https://www.instagram.com/taigranexuslabs', label: 'Instagram', hover: 'hover:text-pink-500' },
+    { icon: <FontAwesomeIcon icon={faFacebook} size={18} />, url: 'https://www.facebook.com/TaigraNexusLabs', label: 'Facebook', hover: 'hover:text-blue-600' },
+    { icon: <FontAwesomeIcon icon={faTiktok} size={18} />, url: 'https://www.tiktok.com/@taigranexualabs', label: 'TikTok', hover: 'hover:text-cyan-400' },
+    { icon: <FontAwesomeIcon icon={faWhatsapp} size={18} />, url: 'https://wa.me', label: 'WhatsApp', hover: 'hover:text-green-500' },
   ];
 
   return (
@@ -155,7 +156,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-6">Corporate</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
-              <li><a href="taigours-group.github.io" target="_blank" rel="noreferrer" className="hover:text-blue-500 transition-colors">TGO Group</a></li>
+              <li><a href="https://taigours-group.github.io/Taigours-Group/" target="_blank" rel="noreferrer" className="hover:text-blue-500 transition-colors">TGO Group</a></li>
               <li><Link to="/about" className="hover:text-blue-500 transition-colors">Careers</Link></li>
               <li><Link to="/contact" className="hover:text-blue-500 transition-colors">Contact</Link></li>
             </ul>

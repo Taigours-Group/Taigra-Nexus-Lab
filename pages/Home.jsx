@@ -7,20 +7,20 @@ import { dbService } from '../services/dbService.js';
 import { PARENT_COMPANY } from '../constants.js';
 
 const Hero = () => (
-  <section id="hero" className="relative overflow-hidden pt-12 md:pt-20 pb-16 md:pb-32 min-h-[85vh] md:min-h-[90vh] flex items-center bg-transparent">
+  <section id="hero" className="relative overflow-hidden pt-12 md:pt-20 pb-16 md:pb-32 min-h-[85vh] md:min-h-[90vh] flex items-center bg-[url('https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772699969/Taigra_Nexus_Labs_Banner_empty.png')] bg-cover bg-center">
     <div className="absolute inset-0 bg-blue-600/5 blur-[120px] rounded-full -translate-y-1/2">
       <div className="absolute inset-0 opacity-40 md:opacity-50">
         
       </div>
     </div>
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] md:text-xs font-semibold mb-6 md:mb-8 uppercase tracking-wider backdrop-blur-sm">
+      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[8px] md:text-xs font-semibold mb-6 md:mb-8 uppercase tracking-wider backdrop-blur-sm">
         Official Tech Arm of {PARENT_COMPANY}
       </motion.div>
-      <motion.h1 initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 md:mb-8 tracking-tight leading-[1.1]">
+      <motion.h1 initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-3xl md:text-7xl lg:text-5xl font-extrabold text-white mb-6 md:mb-8 tracking-tight leading-[1.1]">
         Building the Digital <br className="hidden md:block" /> Backbone <span className="text-blue-500">of Global Enterprises.</span>
       </motion.h1>
-      <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
+      <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-[10px] md:text-sm text-white/80 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
         Taigra Nexus Labs engineers high-performance software, automation, and digital ecosystems for the TGO conglomerate and its global partners.
       </motion.p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -58,7 +58,7 @@ const TGOSection = () => (
           </div>
         </div>
         <div className="relative">
-          <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696074/Taigra_Nexus_Labs_Banner.png" alt="Taigra Nexus Labs Hub" className="rounded-2xl md:rounded-3xl shadow-2xl grayscale w-full" />
+          <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696074/Taigra_Nexus_Labs_Banner.png" alt="Taigra Nexus Labs Hub" className="rounded-2xl md:rounded-3xl shadow-2xl  w-full" />
         </div>
       </div>
     </div>

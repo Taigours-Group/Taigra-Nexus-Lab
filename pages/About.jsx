@@ -14,18 +14,18 @@ const Stats = [
 export const About = () => {
   return (
     <div className="bg-[#050505] min-h-screen text-white">
-      <section className="py-24 border-b border-white/5 relative overflow-hidden">
+      <section className="py-24 border-b border-white/5 relative overflow-hidden bg-[url('https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772699969/Taigra_Nexus_Labs_Banner_empty.png')] bg-cover bg-center">
         <div className="absolute inset-0 bg-blue-600/5 blur-[120px] rounded-full -translate-y-1/2"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold mb-8 text-center"
+            className="text-3xl md:text-7xl lg:text-5xl font-bold mb-8 text-center"
           >
             Digital Architects for <br /> <span className="text-blue-600">The Taigours Dynasty.</span>
           </motion.h1>
-          <p className="text-xl text-gray-400 text-center max-w-3xl mx-auto leading-relaxed">
-            Founded as the central nervous system of TGO, Taigra Nexus Labs Pvt. Ltd has evolved into a powerhouse of digital innovation, managing billions of data points daily.
+          <p className="text-[10px] md:text-sm text-center text-white/80 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
+            Founded as the central nervous system of TGO, TigraTech Pvt. Ltd has evolved into a powerhouse of digital innovation, managing billions of data points daily.
           </p>
         </div>
       </section>

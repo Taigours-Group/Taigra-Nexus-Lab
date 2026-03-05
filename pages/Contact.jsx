@@ -20,7 +20,7 @@ export const Contact = () => {
 
     // 2. Format the WhatsApp message
     const phoneNumber = "9779766115626"; // International format without '+'
-    const whatsappMessage = `*New Taigra Nexus Labs Inquiry From Web*%0A%0A` +
+    const whatsappMessage = `*New TigraTech Inquiry From Web*%0A%0A` +
       `*Name:* ${data.fullName}%0A` +
       `*Email:* ${data.workEmail}%0A` +
       `*Org:* ${data.organization}%0A` +
@@ -37,17 +37,17 @@ export const Contact = () => {
 
   return (
     <div className="bg-[#050505] min-h-screen">
-      <section className="py-24 mb-8 border-b border-white/5 relative overflow-hidden">
+      <section className="py-24 mb-8 border-b border-white/5 relative overflow-hidden bg-[url('https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772699969/Taigra_Nexus_Labs_Banner_empty.png')] bg-cover bg-center">
         <div className="absolute inset-0 bg-blue-600/5 blur-[120px] rounded-full -translate-y-1/2"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold mb-8 text-center"
+            className="text-3xl md:text-7xl lg:text-5xl font-bold mb-8 text-center"
           >
             Get in <span className="text-blue-600">Touch</span>
           </motion.h1>
-          <p className="text-center text-gray-400 text-lg mb-12 leading-relaxed">
+          <p className="text-[10px] md:text-sm text-center text-white/80 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
               Inquiry for a custom solution? Part of the TGO family needing a portal? Connect with our project leads today.
             </p>
         </div>
@@ -63,7 +63,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">Email</p>
-                  <p className="text-white text-lg">taigranexuslabs@gmail.com</p>
+                  <p className="text-white text-lg">tigratechs@gmail.com</p>
                 </div>
               </div>
               <div className="flex gap-6 items-center">
