@@ -5,7 +5,7 @@ export const ACCENT_COLOR = "blue-600";
 export const TUTORIAL_STEPS = [
   {
     target: 'hero',
-    title: 'Welcome to Taigra Nexus Labs',
+    title: 'Welcome to Taigra Nexus Labs Pvt. Ltd.',
     content: `We are the specialized tech arm of ${PARENT_COMPANY}. Our mission is to build the digital backbone for the entire group.`,
     position: 'bottom'
   },
