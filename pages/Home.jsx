@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShieldCheck, Zap, Cpu, ExternalLink } from 'lucide-react';
 import { dbService } from '../services/dbService.js';
-import { PARENT_COMPANY } from '../constants.js';
+import { BRAND_NAME, PARENT_COMPANY } from '../constants.js';
 
 const Hero = () => (
-  <section id="hero" className="relative overflow-hidden pt-12 md:pt-20 pb-16 md:pb-32 min-h-[85vh] md:min-h-[90vh] flex items-center bg-[url('https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772699969/Taigra_Nexus_Labs_Banner_empty.png')] bg-cover bg-center">
+  <section id="hero" className="relative overflow-hidden pt-12 md:pt-20 pb-16 md:pb-32 min-h-[85vh] md:min-h-[90vh] flex items-center bg-[url('https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772699969/Taigra_Nexus_Labs_Banner_empty.png')] bg-cover bg-center" loading='lazy'>
     <div className="absolute inset-0 bg-blue-600/5 blur-[120px] rounded-full -translate-y-1/2">
       <div className="absolute inset-0 opacity-40 md:opacity-50">
         
@@ -21,7 +21,7 @@ const Hero = () => (
         Building the Digital <br className="hidden md:block" /> Backbone <span className="text-blue-500">of Global Enterprises.</span>
       </motion.h1>
       <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-[10px] md:text-sm text-white/80 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
-        Taigra Nexus Labs engineers high-performance software, automation, and digital ecosystems for the TGO conglomerate and its global partners.
+         {BRAND_NAME} engineers high-performance software, automation, and digital ecosystems for the TGO conglomerate and its global partners.
       </motion.p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link to="/projects" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-blue-500/20">
@@ -40,9 +40,9 @@ const TGOSection = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white text-center md:text-left">Strategic Subsidiary of TGO</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white text-center md:text-left">About Us</h2>
           <p className="text-gray-400 text-base md:text-lg mb-8 leading-relaxed text-center md:text-left">
-            As the specialized technology wing of Taigours Group of Organization (TGO), we manage the entire digital lifecycle for all child companies under the TGO umbrella.
+           We design and develop powerful digital systems, custom software, and scalable technology solutions that help organizations operate smarter, grow faster, and innovate in the digital era. 
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             <div className="p-5 md:p-6 bg-white/5 border border-white/5 rounded-2xl">
@@ -58,7 +58,7 @@ const TGOSection = () => (
           </div>
         </div>
         <div className="relative">
-          <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696074/Taigra_Nexus_Labs_Banner.png" alt="Taigra Nexus Labs Hub" className="rounded-2xl md:rounded-3xl shadow-2xl  w-full" />
+          <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696074/Taigra_Nexus_Labs_Banner.png" alt={`${BRAND_NAME} Hub`} className="rounded-2xl md:rounded-3xl shadow-2xl  w-full" loading='lazy' />
         </div>
       </div>
     </div>

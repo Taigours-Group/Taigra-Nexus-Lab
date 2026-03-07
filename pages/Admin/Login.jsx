@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Terminal, Lock, User } from 'lucide-react';
 import { dbService } from '../../services/dbService.js';
+import { BRAND_NAME } from '../../constants.js';
 
 export const AdminLogin = () => {
   const navigate = useNavigate();
@@ -29,11 +30,11 @@ export const AdminLogin = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
           <div className="inline-flex bg-blue-600 rounded-2xl mb-6 shadow-xl shadow-blue-500/20">
-           <div className={`p-1.5 md:p-2 rounded-lg  transition-transform`} style={{ backgroundColor: '#1b213bff' }}>
-             <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png" alt="Taigra Nexus Labs Logo" className="w-10 h-10" />
+           <div className={`rounded  transition-transform`}>
+             <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png" alt={`${BRAND_NAME} Logo`} className="w-12 h-12 rounded" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-white mb-2">TigraAdmin Access</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">{BRAND_NAME} <br />Admin Access</h1>
           <p className="text-gray-500">Authorized personnel only.</p>
         </div>
 

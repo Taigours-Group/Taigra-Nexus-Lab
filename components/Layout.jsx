@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2 group">
             <div className={`rounded-lg transition-transform`} style={{ backgroundColor: '#1b213bff' }}>
-              <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png" alt="" className="w-6 h-6 md:w-8 md:h-8 rounded-md" />
+              <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png" alt="" className="w-6 h-6 md:w-8 md:h-8 rounded-md" loading='lazy' />
             </div>
             <span className="text-lg md:text-xl font-bold tracking-tight text-white">{BRAND_NAME}</span>
           </Link>
@@ -146,7 +146,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-6">Explore</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
-              <li><Link to="/projects" className="hover:text-blue-500 transition-colors">Projects</Link></li>
+              <li><Link to="/projects #project" className="hover:text-blue-500 transition-colors">Projects</Link></li>
               <li><Link to="/services" className="hover:text-blue-500 transition-colors">Services</Link></li>
               <li><Link to="/blogs" className="hover:text-blue-500 transition-colors">Insights</Link></li>
             </ul>
@@ -183,7 +183,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-gray-500 text-xs md:text-sm text-center gap-4">
-          <p>&copy; 2026 Taigra Nexus Labs Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; 2026 {BRAND_NAME} Pvt. Ltd. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="/privacy-policy.html" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms-of-service.html" className="hover:text-white transition-colors">Terms of Service</a>
