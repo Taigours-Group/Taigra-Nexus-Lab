@@ -183,7 +183,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-gray-500 text-xs md:text-sm text-center gap-4">
-          <p>&copy; 2026 TigraTech Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; 2026 Taigra Nexus Labs Pvt. Ltd. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="/privacy-policy.html" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms-of-service.html" className="hover:text-white transition-colors">Terms of Service</a>
