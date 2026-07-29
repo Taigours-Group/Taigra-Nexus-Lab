@@ -317,8 +317,8 @@ export const AdminDashboard = () => {
         onClick={() => switchTab(tab.id)}
         className={`flex items-center justify-center gap-2 px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all shrink-0 ${
           isActive
-            ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25'
-            : 'text-slate-400 bg-white/5 hover:text-white lg:w-full lg:justify-start'
+            ? 'bg-royal-600 text-white shadow-lg shadow-royal-600/25'
+            : 'text-ink-500 bg-ink-950/[0.04] hover:text-ink-950 lg:w-full lg:justify-start'
         }`}
       >
         <Icon size={18} />
@@ -331,10 +331,10 @@ export const AdminDashboard = () => {
   const showList = activeTab !== 'overview' && !isEditing;
 
   return (
-    <div className="min-h-screen bg-nexus-950 flex flex-col lg:flex-row">
-      <header className="lg:hidden sticky top-0 z-40 bg-nexus-950/95 backdrop-blur-xl border-b border-white/[0.06]">
+    <div className="min-h-screen bg-ink-50 flex flex-col lg:flex-row">
+      <header className="lg:hidden sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-ink-950/[0.08]">
         <div className="flex items-center justify-between px-3 py-2.5 gap-2">
-          <Link to="/" className="flex items-center gap-2 min-w-0 text-white font-bold text-sm">
+          <Link to="/" className="flex items-center gap-2 min-w-0 text-ink-950 font-bold text-sm">
             <img src={LOGO_URL} alt="" className="w-8 h-8 rounded-md shrink-0" />
             <span className="truncate">Admin</span>
           </Link>
@@ -342,7 +342,7 @@ export const AdminDashboard = () => {
             <button
               type="button"
               onClick={loadData}
-              className="p-2.5 text-slate-400 hover:text-white rounded-lg"
+              className="p-2.5 text-ink-500 hover:text-ink-950 rounded-lg"
               aria-label="Refresh"
             >
               <RefreshCw size={18} />
@@ -350,7 +350,7 @@ export const AdminDashboard = () => {
             <button
               type="button"
               onClick={handleLogout}
-              className="p-2.5 text-red-400 hover:bg-red-500/10 rounded-lg"
+              className="p-2.5 text-royal-600 hover:bg-royal-50 rounded-lg"
               aria-label="Sign out"
             >
               <LogOut size={20} />
@@ -362,9 +362,9 @@ export const AdminDashboard = () => {
         </div>
       </header>
 
-      <aside className="hidden lg:flex w-72 bg-nexus-900 border-r border-white/[0.06] p-6 flex-col shrink-0">
-        <div className="flex items-center gap-3 text-white font-bold text-lg mb-8">
-          <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center">
+      <aside className="hidden lg:flex w-72 bg-white border-r border-ink-950/[0.08] p-6 flex-col shrink-0">
+        <div className="flex items-center gap-3 text-ink-950 font-bold text-lg mb-8">
+          <div className="w-9 h-9 bg-royal-600 text-white rounded-lg flex items-center justify-center">
             <LayoutDashboard size={18} />
           </div>
           <span>Admin</span>
@@ -375,20 +375,20 @@ export const AdminDashboard = () => {
         <button
           type="button"
           onClick={loadData}
-          className="flex items-center gap-2 text-slate-500 text-sm py-2 hover:text-white mb-2"
+          className="flex items-center gap-2 text-ink-500 text-sm py-2 hover:text-ink-950 mb-2"
         >
           <RefreshCw size={16} /> Refresh data
         </button>
         <Link
           to="/"
-          className="flex items-center gap-2 text-slate-500 text-sm py-2 hover:text-white mb-2"
+          className="flex items-center gap-2 text-ink-500 text-sm py-2 hover:text-ink-950 mb-2"
         >
           <ArrowLeft size={16} /> Public site
         </Link>
         <button
           type="button"
           onClick={handleLogout}
-          className="flex items-center gap-3 px-4 py-3 text-red-400 font-semibold hover:bg-red-500/10 rounded-xl"
+          className="flex items-center gap-3 px-4 py-3 text-royal-600 font-semibold hover:bg-royal-50 rounded-xl"
         >
           <LogOut size={20} /> Sign out
         </button>
@@ -399,10 +399,10 @@ export const AdminDashboard = () => {
           <div className="max-w-4xl mx-auto w-full">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6 sm:mb-8">
               <div className="min-w-0">
-                <h1 className="text-2xl sm:text-3xl font-bold text-white capitalize">
+                <h1 className="text-2xl sm:text-3xl font-bold text-ink-950 capitalize">
                   {contentTab?.label || 'Admin'}
                 </h1>
-                <p className="text-slate-500 text-xs sm:text-sm mt-1">
+                <p className="text-ink-500 text-xs sm:text-sm mt-1">
                   {BRAND_NAME} · control panel
                 </p>
               </div>
@@ -420,7 +420,7 @@ export const AdminDashboard = () => {
             {activeTab === 'overview' &&
               (isLoading ? (
                 <div className="flex justify-center py-20">
-                  <div className="w-10 h-10 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+                  <div className="w-10 h-10 border-2 border-royal-600 border-t-transparent rounded-full animate-spin" />
                 </div>
               ) : (
                 <AdminOverview stats={stats} onAdd={openAdd} />
@@ -460,7 +460,7 @@ export const AdminDashboard = () => {
         </div>
 
         {isEditing && activeTab !== 'overview' && (
-          <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-nexus-950/95 backdrop-blur-xl border-t border-white/[0.06] flex gap-2">
+          <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/95 backdrop-blur-xl border-t border-ink-950/[0.08] flex gap-2">
             <button type="submit" form="admin-form" className="btn-primary flex-1 !py-3.5 text-sm">
               Save
             </button>

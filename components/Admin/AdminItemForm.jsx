@@ -18,7 +18,7 @@ export const AdminItemForm = ({
   return (
     <form id="admin-form" onSubmit={onSubmit} className="nexus-card p-4 sm:p-6 lg:p-8 space-y-5 sm:space-y-6">
       <div className="flex items-center justify-between gap-2 flex-wrap">
-        <h2 className="text-lg font-bold text-white">
+        <h2 className="text-lg font-bold text-ink-950">
           {formData.id ? 'Edit' : 'New'} {activeTab.slice(0, -1)}
         </h2>
         <div className="flex items-center gap-2">
@@ -26,7 +26,7 @@ export const AdminItemForm = ({
             <button
               type="button"
               onClick={onDuplicate}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-400 hover:text-white bg-white/5 rounded-lg"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-ink-500 hover:text-ink-950 bg-ink-950/[0.04] rounded-lg"
             >
               <Copy size={14} /> Duplicate
             </button>
@@ -34,7 +34,7 @@ export const AdminItemForm = ({
           <button
             type="button"
             onClick={onCancel}
-            className="p-2 text-slate-400 hover:text-white lg:hidden"
+            className="p-2 text-ink-500 hover:text-ink-950 lg:hidden"
             aria-label="Close form"
           >
             <X size={20} />
@@ -43,7 +43,7 @@ export const AdminItemForm = ({
       </div>
 
       {formData.imageUrl && (isProject || isBlog) && (
-        <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 aspect-video max-h-48">
+        <div className="rounded-xl overflow-hidden border border-ink-950/10 bg-ink-50 aspect-video max-h-48">
           <img
             src={formData.imageUrl}
             alt="Preview"
@@ -57,7 +57,7 @@ export const AdminItemForm = ({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         <div className="space-y-1.5 sm:col-span-2">
-          <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Title</label>
+          <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">Title</label>
           <input
             required
             value={formData.title}
@@ -68,7 +68,7 @@ export const AdminItemForm = ({
 
         {isProject && (
           <div className="space-y-1.5">
-            <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+            <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">
               Client type
             </label>
             <select
@@ -88,7 +88,7 @@ export const AdminItemForm = ({
         {isBlog && (
           <>
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Author</label>
+              <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">Author</label>
               <input
                 required
                 value={formData.author}
@@ -97,7 +97,7 @@ export const AdminItemForm = ({
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+              <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">
                 Publish date
               </label>
               <input
@@ -113,7 +113,7 @@ export const AdminItemForm = ({
         {isService && (
           <>
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Icon</label>
+              <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">Icon</label>
               <select
                 value={formData.icon}
                 onChange={(e) => setFormData({ ...formData, icon: e.target.value })}
@@ -127,7 +127,7 @@ export const AdminItemForm = ({
               </select>
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+              <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">
                 Category
               </label>
               <select
@@ -147,7 +147,7 @@ export const AdminItemForm = ({
 
         {(isProject || isBlog) && (
           <div className="space-y-1.5 sm:col-span-2">
-            <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Image URL</label>
+            <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">Image URL</label>
             <input
               required
               value={formData.imageUrl}
@@ -161,7 +161,7 @@ export const AdminItemForm = ({
         {isProject && (
           <>
             <div className="space-y-1.5 sm:col-span-2">
-              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+              <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">
                 Tech stack (comma-separated)
               </label>
               <input
@@ -171,7 +171,7 @@ export const AdminItemForm = ({
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Live URL</label>
+              <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">Live URL</label>
               <input
                 value={formData.liveUrl}
                 onChange={(e) => setFormData({ ...formData, liveUrl: e.target.value })}
@@ -179,7 +179,7 @@ export const AdminItemForm = ({
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">GitHub URL</label>
+              <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">GitHub URL</label>
               <input
                 value={formData.repoUrl}
                 onChange={(e) => setFormData({ ...formData, repoUrl: e.target.value })}
@@ -191,9 +191,9 @@ export const AdminItemForm = ({
                 type="checkbox"
                 checked={formData.featured}
                 onChange={(e) => setFormData({ ...formData, featured: e.target.checked })}
-                className="w-5 h-5 accent-blue-500"
+                className="w-5 h-5 accent-royal-600"
               />
-              <span className="text-sm text-slate-300 flex items-center gap-2">
+              <span className="text-sm text-ink-700 flex items-center gap-2">
                 <Star size={16} className="text-amber-400" /> Featured on homepage
               </span>
             </label>
@@ -202,7 +202,7 @@ export const AdminItemForm = ({
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">
           {isService ? 'Description' : isProject ? 'Description' : 'Excerpt'}
         </label>
         <textarea
@@ -216,7 +216,7 @@ export const AdminItemForm = ({
 
       {isBlog && (
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Full content</label>
+          <label className="text-xs font-semibold text-ink-500 uppercase tracking-wide">Full content</label>
           <textarea
             required
             value={formData.content}

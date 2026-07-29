@@ -27,8 +27,8 @@ export const AdminItemList = ({
   if (isLoading) {
     return (
       <div className="flex flex-col items-center py-16 gap-3">
-        <div className="w-10 h-10 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-        <p className="text-slate-500 text-sm">Loading…</p>
+        <div className="w-10 h-10 border-2 border-royal-600 border-t-transparent rounded-full animate-spin" />
+        <p className="text-ink-500 text-sm">Loading…</p>
       </div>
     );
   }
@@ -37,7 +37,7 @@ export const AdminItemList = ({
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-400" />
           <input
             type="search"
             value={searchQuery}
@@ -47,7 +47,7 @@ export const AdminItemList = ({
           />
         </div>
         <div className="flex items-center gap-2 shrink-0">
-          <ArrowUpDown size={16} className="text-slate-500 hidden sm:block" />
+          <ArrowUpDown size={16} className="text-ink-400 hidden sm:block" />
           <select
             value={sortBy}
             onChange={(e) => onSortChange(e.target.value)}
@@ -60,13 +60,13 @@ export const AdminItemList = ({
         </div>
       </div>
 
-      <p className="text-xs text-slate-500">
+      <p className="text-xs text-ink-400">
         {items.length} item{items.length !== 1 ? 's' : ''}
         {searchQuery ? ' matching search' : ''}
       </p>
 
       {items.length === 0 ? (
-        <div className="nexus-card p-10 text-center text-slate-500 text-sm">
+        <div className="nexus-card p-10 text-center text-ink-400 text-sm">
           {searchQuery ? 'No matches. Try a different search.' : `No ${activeTab} yet.`}
         </div>
       ) : (
@@ -78,22 +78,22 @@ export const AdminItemList = ({
             >
               <div className="flex gap-3 min-w-0 flex-1">
                 {(activeTab === 'projects' || activeTab === 'blogs') && (
-                  <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white/10 shrink-0">
+                  <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-ink-100 shrink-0">
                     <img src={item.imageUrl} alt="" className="w-full h-full object-cover" />
                   </div>
                 )}
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <h3 className="text-base sm:text-lg font-semibold text-white truncate">
+                    <h3 className="text-base sm:text-lg font-semibold text-ink-950 truncate">
                       {item.title}
                     </h3>
                     {activeTab === 'projects' && item.featured && (
                       <Star size={14} className="text-amber-400 fill-amber-400 shrink-0" />
                     )}
                   </div>
-                  <div className="flex flex-wrap gap-2 mt-1.5 text-[10px] sm:text-xs text-slate-500">
+                  <div className="flex flex-wrap gap-2 mt-1.5 text-[10px] sm:text-xs text-ink-400">
                     {activeTab === 'projects' && (
-                      <span className="text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+                      <span className="text-royal-700 bg-royal-50 px-2 py-0.5 rounded border border-royal-100">
                         {item.clientType}
                       </span>
                     )}
@@ -103,7 +103,7 @@ export const AdminItemList = ({
                       </span>
                     )}
                     {activeTab === 'services' && (
-                      <span className="text-slate-400">{item.category}</span>
+                      <span className="text-ink-500">{item.category}</span>
                     )}
                     {(activeTab === 'blogs' || item.date) && (
                       <span className="flex items-center gap-1">
@@ -111,7 +111,7 @@ export const AdminItemList = ({
                       </span>
                     )}
                     {activeTab === 'services' && (
-                      <span className="text-slate-600">Icon: {item.icon}</span>
+                      <span className="text-ink-300">Icon: {item.icon}</span>
                     )}
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export const AdminItemList = ({
                     href={item.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-1.5 px-3 py-2.5 bg-white/5 text-slate-300 rounded-xl text-sm hover:text-white"
+                    className="flex items-center justify-center gap-1.5 px-3 py-2.5 bg-ink-950/[0.04] text-ink-600 rounded-xl text-sm hover:text-ink-950"
                   >
                     <ExternalLink size={16} />
                   </a>
@@ -135,8 +135,8 @@ export const AdminItemList = ({
                     title={item.featured ? 'Remove from featured' : 'Mark featured'}
                     className={`p-2.5 rounded-xl transition-colors ${
                       item.featured
-                        ? 'bg-amber-500/20 text-amber-400'
-                        : 'bg-white/5 text-slate-500 hover:text-amber-400'
+                        ? 'bg-amber-100 text-amber-600'
+                        : 'bg-ink-950/[0.04] text-ink-400 hover:text-amber-500'
                     }`}
                   >
                     <Star size={18} className={item.featured ? 'fill-current' : ''} />
@@ -145,7 +145,7 @@ export const AdminItemList = ({
                 <button
                   type="button"
                   onClick={() => onDuplicate(item)}
-                  className="p-2.5 bg-white/5 text-slate-400 rounded-xl hover:text-white"
+                  className="p-2.5 bg-ink-950/[0.04] text-ink-500 rounded-xl hover:text-ink-950"
                   title="Duplicate"
                 >
                   <Copy size={18} />
@@ -153,14 +153,14 @@ export const AdminItemList = ({
                 <button
                   type="button"
                   onClick={() => onEdit(item)}
-                  className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-500/15 text-blue-400 rounded-xl text-sm font-semibold hover:bg-blue-600 hover:text-white"
+                  className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 bg-royal-50 text-royal-700 rounded-xl text-sm font-semibold hover:bg-royal-600 hover:text-white"
                 >
                   <Edit2 size={18} /> Edit
                 </button>
                 <button
                   type="button"
                   onClick={() => onDelete(item.id)}
-                  className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 bg-red-500/15 text-red-400 rounded-xl text-sm font-semibold hover:bg-red-500 hover:text-white"
+                  className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 bg-red-50 text-red-600 rounded-xl text-sm font-semibold hover:bg-red-600 hover:text-white"
                 >
                   <Trash2 size={18} />
                 </button>

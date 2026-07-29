@@ -1,5 +1,5 @@
-export const BRAND_NAME = "Taigra Nexus Labs";
-export const PARENT_COMPANY = "Taigours Group of Organization (TGO)";
+export const BRAND_NAME = "Taigra Nexus Lab";
+export const PARENT_COMPANY = "Taigour Group of Organization (TGO)";
 export const ACCENT_COLOR = "blue-600";
 
 /** Office location — aligned with TGO / Janakpur area (visit by appointment) */
@@ -21,7 +21,7 @@ export const OFFICE = {
 export const TUTORIAL_STEPS = [
   {
     target: 'hero',
-    title: 'Welcome to Taigra Nexus Labs Pvt. Ltd.',
+    title: 'Welcome to Taigra Nexus Lab Pvt. Ltd.',
     content: `We are the specialized tech arm of ${PARENT_COMPANY}. Our mission is to build the digital backbone for the entire group.`,
     position: 'bottom'
   },

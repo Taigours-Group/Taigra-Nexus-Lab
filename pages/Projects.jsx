@@ -34,7 +34,7 @@ export const Projects = () => {
         subtitle="Systems, platforms, and tools built for the TGO ecosystem and beyond."
       />
 
-      <section className="pb-12 md:pb-24">
+      <section className="py-12 md:py-24">
         <div className="container-page">
           <div
             id="project"
@@ -51,8 +51,8 @@ export const Projects = () => {
                 onClick={() => setFilter(type)}
                 className={`shrink-0 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-sm font-semibold border transition-all ${
                   filter === type
-                    ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-600/25'
-                    : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10 hover:text-white'
+                    ? 'bg-royal-600 border-royal-600 text-white shadow-lg shadow-royal-600/25'
+                    : 'bg-white border-ink-950/10 text-ink-500 hover:border-royal-200 hover:text-ink-950'
                 }`}
               >
                 {type}
@@ -75,16 +75,15 @@ export const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-nexus-950/90 via-transparent to-transparent" />
-                  <span className="absolute bottom-1.5 left-1.5 sm:bottom-3 sm:left-3 text-[9px] sm:text-xs font-semibold uppercase tracking-wide text-blue-300 bg-blue-500/15 px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded border border-blue-500/25 max-w-[90%] truncate">
+                  <span className="absolute bottom-1.5 left-1.5 sm:bottom-3 sm:left-3 text-[9px] sm:text-xs font-semibold uppercase tracking-wide text-royal-700 bg-white/90 backdrop-blur px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded border border-royal-100 max-w-[90%] truncate">
                     {project.clientType}
                   </span>
                 </div>
                 <div className="nexus-grid-card-body flex flex-col flex-grow min-w-0">
-                  <h3 className="text-xs sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 text-white group-hover:text-blue-400 transition-colors line-clamp-2 leading-snug">
+                  <h3 className="text-xs sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 text-ink-950 group-hover:text-royal-600 transition-colors line-clamp-2 leading-snug">
                     {project.title}
                   </h3>
-                  <p className="text-slate-400 text-[10px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 sm:line-clamp-3 leading-relaxed flex-grow">
+                  <p className="text-ink-500 text-[10px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 sm:line-clamp-3 leading-relaxed flex-grow">
                     {project.description}
                   </p>
                   {project.techStack?.length > 0 && (
@@ -92,7 +91,7 @@ export const Projects = () => {
                       {project.techStack.slice(0, 4).map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs px-2 py-0.5 rounded-md bg-white/5 text-slate-400 border border-white/10"
+                          className="text-xs px-2 py-0.5 rounded-md bg-ink-50 text-ink-600 border border-ink-950/[0.08]"
                         >
                           {tech}
                         </span>
@@ -116,7 +115,7 @@ export const Projects = () => {
           </div>
 
           {filteredProjects.length === 0 && (
-            <p className="text-center text-slate-500 py-16 text-sm">No projects match this filter.</p>
+            <p className="text-center text-ink-400 py-16 text-sm">No projects match this filter.</p>
           )}
         </div>
       </section>

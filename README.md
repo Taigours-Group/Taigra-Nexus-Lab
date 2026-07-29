@@ -1,19 +1,20 @@
 <div align="center">
-  <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png" alt="Taigra Nexus Labs Logo" width="120" />
+  <img src="https://res.cloudinary.com/dbjjzyrr3/image/upload/v1772696070/Taigra_Nexus_Labs_logo.png" alt="Taigra Nexus Lab Logo" width="120" />
 
-  # Taigra Nexus Labs
+  # Taigra Nexus Lab
 
-  ### The Official Tech Arm of Taigours Group of Organization (TGO)
+  ### The Official Tech Arm of Taigour Group of Organization (TGO)
 
-  [![Version](https://img.shields.io/badge/version-1.3.0-blue?style=for-the-badge)](https://github.com/Taigours-Group/Taigra-Nexus-Lab)
+  [![Version](https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge)](https://github.com/TaigourGroup/Taigra-Nexus-Lab)
   [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
   [![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+  [![Three.js](https://img.shields.io/badge/Three.js-0.185-000000?style=for-the-badge&logo=threedotjs&logoColor=white)](https://threejs.org)
   [![Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
   [![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)]()
 
   *Enterprise-grade digital infrastructure powering the entire TGO ecosystem.*
 
-  [Live Site](https://taigranexuslabs.onrender.com) · [Report Bug](https://github.com/Taigours-Group/Taigra-Nexus-Lab/issues) · [Request Feature](https://github.com/Taigours-Group/Taigra-Nexus-Lab/issues)
+  [Live Site](https://taigranexuslabs.onrender.com) · [Report Bug](https://github.com/TaigourGroup/Taigra-Nexus-Lab/issues) · [Request Feature](https://github.com/TaigourGroup/Taigra-Nexus-Lab/issues)
 
 </div>
 
@@ -24,6 +25,7 @@
 - [About](#-about)
 - [Tech Stack](#-tech-stack)
 - [Architecture](#-architecture)
+- [Design System](#-design-system)
 - [Features](#-features)
 - [Getting Started](#-getting-started)
 - [Environment Variables](#-environment-variables)
@@ -37,9 +39,9 @@
 
 ## 🏢 About
 
-**Taigra Nexus Labs Pvt. Ltd.** is the specialized technology division of **Taigours Group of Organization (TGO)**, headquartered in Janakpurdham, Madhesh Province, Nepal. We build and maintain the digital backbone for over 12 child companies within the TGO ecosystem — from logistics and real estate to finance and esports.
+**Taigra Nexus Lab Pvt. Ltd.** is the specialized technology division of **Taigour Group of Organization (TGO)**, headquartered in Janakpurdham, Madhesh Province, Nepal. We build and maintain the digital backbone for over 12 child companies within the TGO ecosystem — from logistics and real estate to finance and esports.
 
-This repository contains the official corporate website and admin platform for Taigra Nexus Labs, serving as the public-facing showcase of our capabilities, project portfolio, blog, services, and internal management tools.
+This repository contains the official corporate website and admin platform for Taigra Nexus Lab, serving as the public-facing showcase of our capabilities, project portfolio, blog, services, and internal management tools.
 
 ---
 
@@ -47,10 +49,11 @@ This repository contains the official corporate website and admin platform for T
 
 | Layer        | Technology                                                                          |
 | ------------ | ----------------------------------------------------------------------------------- |
-| **Frontend** | React 19, Vite 6, React Router 7, Framer Motion, Tailwind CSS (CDN)                |
+| **Frontend** | React 19, Vite 6, React Router 7, Framer Motion 12, Tailwind CSS (CDN)             |
+| **3D / FX**  | Three.js (hero nexus network), Web Audio API (brand impact sound)                   |
 | **Backend**  | Node.js, Express 4                                                                  |
 | **Database** | Supabase (PostgreSQL)                                                               |
-| **Icons**    | Lucide React, Font Awesome                                                          |
+| **Icons**    | Lucide React, Font Awesome (brands)                                                 |
 | **Fonts**    | Plus Jakarta Sans (Google Fonts)                                                    |
 | **Tooling**  | Concurrently, dotenv                                                                |
 
@@ -86,10 +89,24 @@ This repository contains the official corporate website and admin platform for T
 
 ---
 
+## 🎨 Design System
+
+Minimal light theme — white surfaces, ink-gray text, **royal red (`#BC3232`)** accent. Defined as CSS custom properties in `index.css` plus a matching Tailwind config (`royal` / `ink` palettes) in `index.html`.
+
+| Element | Treatment |
+| --- | --- |
+| **Brand mark** | Inline SVG (`components/Logo.jsx`) — recolorable `dark`/`light` variants; animated mode flies the pieces in from off-canvas and "collides" them into place with an impact shake + synthesized metal-clang (Web Audio) |
+| **Navbar** | Floating glass island — rounded blurred card, sliding dark active pill (Framer Motion `layoutId`), pill Contact CTA |
+| **Hero** | Three.js "nexus" constellation (`components/ThreeScene.jsx`) — drifting node network, pointer parallax, respects `prefers-reduced-motion`, full GL cleanup on unmount |
+| **Cards / buttons** | `.nexus-card`, `.btn-primary`, `.btn-secondary` utility classes in `index.css` |
+| **Typography** | Plus Jakarta Sans, tight tracking on headings |
+
+---
+
 ## ✨ Features
 
 ### Public Website
-- 🏠 **Home** — Hero section, TGO heritage showcase, featured projects
+- 🏠 **Home** — Three.js nexus hero, animated brand mark, TGO heritage showcase, featured projects
 - 📖 **About** — Company story, mission, and the TGO ecosystem
 - 🔧 **Services** — Full catalog of our technical offerings
 - 💼 **Projects** — Portfolio of enterprise systems we've built
@@ -104,8 +121,9 @@ This repository contains the official corporate website and admin platform for T
 - ⚡ **Real-time sync** — All changes persist instantly to Supabase
 
 ### Performance & UX
-- 🚀 **Loading Screen** — Branded splash with minimum display time
-- ✨ **Framer Motion Animations** — Smooth page transitions and scroll reveals
+- 🚀 **Loading Screen** — Branded splash with pulsing logo and minimum display time
+- ✨ **Framer Motion Animations** — Smooth page transitions, scroll reveals, logo collision intro
+- ♿ **Accessible** — Skip link, focus-visible outlines, `prefers-reduced-motion` support
 - 📱 **Fully Responsive** — Mobile-first design across all pages
 - 🔍 **SEO Optimized** — Meta tags, sitemap, robots.txt, and Google verification
 
@@ -124,7 +142,7 @@ This repository contains the official corporate website and admin platform for T
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/Taigours-Group/Taigra-Nexus-Lab.git
+   git clone https://github.com/TaigourGroup/Taigra-Nexus-Lab.git
    cd Taigra-Nexus-Lab
    ```
 
@@ -180,13 +198,22 @@ PASSWORD_KEY=your-secure-password
 Taigra-Nexus-Lab/
 ├── components/              # Reusable UI components
 │   ├── Admin/               # Admin-specific components
-│   ├── CookieConsent.jsx    # GDPR cookie banner
-│   ├── Layout.jsx           # Main layout (header, footer, nav)
-│   ├── LoadingScreen.jsx    # Branded splash screen
-│   ├── PageHero.jsx         # Reusable page hero section
+│   │   ├── adminConfig.js       # Field/content-type config for CRUD forms
+│   │   ├── AdminItemForm.jsx    # Create/edit form
+│   │   ├── AdminItemList.jsx    # Item listing with actions
+│   │   ├── AdminOverview.jsx    # Dashboard overview cards
+│   │   └── AdminToast.jsx       # Toast notifications
+│   ├── CookieConsent.jsx    # GDPR cookie banner + settings link
+│   ├── Layout.jsx           # Floating island navbar + footer shell
+│   ├── LoadingScreen.jsx    # Branded splash (pulsing logo)
+│   ├── Logo.jsx             # Inline SVG brand mark (collision intro + clang)
+│   ├── PageHero.jsx         # Reusable page hero / section heading
+│   ├── ThreeScene.jsx       # Three.js nexus network for the home hero
 │   └── Tutorial.jsx         # Interactive onboarding walkthrough
 ├── pages/                   # Route-level page components
-│   ├── Admin/               # Admin login & dashboard
+│   ├── Admin/
+│   │   ├── Dashboard.jsx        # CRUD dashboard
+│   │   └── Login.jsx            # Admin login
 │   ├── About.jsx
 │   ├── Blogs.jsx
 │   ├── Contact.jsx
@@ -196,20 +223,29 @@ Taigra-Nexus-Lab/
 ├── services/                # Data access layer
 │   └── dbService.js         # API client for Express backend
 ├── utils/                   # Utility modules
-│   └── cookieConsent.js     # Cookie consent logic
+│   └── cookieConsent.js     # Cookie consent read/apply logic
+├── data/                    # Seed/fallback JSON content
+│   ├── blogs.json
+│   ├── projects.json
+│   └── services.json
 ├── public/                  # Static assets & legal pages
+│   ├── legal.css            # Shared styles for legal pages
+│   ├── legal-lang.js        # Language toggle for legal pages
 │   ├── privacy-policy.html
 │   ├── terms-of-service.html
 │   ├── sitemap.xml
 │   └── robot.txt
 ├── App.jsx                  # Root component with routing
 ├── index.jsx                # React entry point
-├── index.html               # HTML shell
-├── index.css                # Global styles
+├── index.html               # HTML shell (Tailwind CDN config, fonts)
+├── index.css                # Global styles & design tokens
 ├── constants.js             # Brand constants & config
 ├── types.js                 # Shared type definitions
+├── logo.html                # Original brand mark SVG reference
+├── metadata.json            # App metadata
 ├── server.js                # Express API + Supabase integration
 ├── vite.config.js           # Vite configuration
+├── jsconfig.json            # Editor path/intellisense config
 ├── package.json
 └── .env                     # Environment variables (not committed)
 ```
@@ -256,7 +292,7 @@ The application is designed for deployment on platforms like **Render**, **Railw
 
 ## 📍 Contact
 
-**Taigra Nexus Labs Pvt. Ltd.**
+**Taigra Nexus Lab Pvt. Ltd.**
 Pidari, Janakpurdham, Dhanusha District
 Madhesh Province, Nepal
 
@@ -267,8 +303,8 @@ Madhesh Province, Nepal
 
 <div align="center">
 
-  **Built with ❤️ by [Taigra Nexus Labs](https://taigranexuslabs.onrender.com) — A TGO Company**
+  **Built with ❤️ by [Taigra Nexus Lab](https://taigranexuslabs.onrender.com) — A TGO Company**
 
-  *© 2026 Taigra Nexus Labs Pvt. Ltd. All rights reserved.*
+  *© 2026 Taigra Nexus Lab Pvt. Ltd. All rights reserved.*
 
 </div>

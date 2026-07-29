@@ -83,14 +83,14 @@ export const CookieConsent = () => {
         </button>
 
         <div className="flex items-start gap-3 mb-4">
-          <div className="p-2.5 rounded-xl bg-blue-500/15 ring-1 ring-blue-500/25 shrink-0">
-            <Cookie className="w-5 h-5 text-blue-400" />
+          <div className="p-2.5 rounded-xl bg-royal-50 ring-1 ring-royal-100 shrink-0">
+            <Cookie className="w-5 h-5 text-royal-600" />
           </div>
           <div className="min-w-0 pr-6">
-            <h2 id="cookie-title" className="text-base sm:text-lg font-bold text-white mb-1">
+            <h2 id="cookie-title" className="text-base sm:text-lg font-bold text-ink-950 mb-1">
               {showSettings ? 'Cookie preferences' : 'We value your privacy'}
             </h2>
-            <p id="cookie-desc" className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            <p id="cookie-desc" className="text-ink-500 text-xs sm:text-sm leading-relaxed">
               {showSettings
                 ? 'Choose which optional cookies we may use. Necessary cookies keep the site secure and working.'
                 : 'We use cookies to improve your experience, remember settings, and understand how visitors use our site. You can accept all, use essential only, or customize.'}
@@ -102,17 +102,17 @@ export const CookieConsent = () => {
           <div className="cookie-consent-options space-y-3 mb-5">
             <div className="cookie-option cookie-option--locked">
               <div>
-                <p className="font-semibold text-white text-sm flex items-center gap-2">
-                  <Shield size={14} className="text-green-400" /> Necessary
+                <p className="font-semibold text-ink-950 text-sm flex items-center gap-2">
+                  <Shield size={14} className="text-green-600" /> Necessary
                 </p>
-                <p className="text-slate-500 text-xs mt-0.5">Required for security, forms, and basic functions. Always on.</p>
+                <p className="text-ink-400 text-xs mt-0.5">Required for security, forms, and basic functions. Always on.</p>
               </div>
-              <span className="text-xs font-bold text-green-400 uppercase">Always on</span>
+              <span className="text-xs font-bold text-green-600 uppercase">Always on</span>
             </div>
             <label className="cookie-option">
               <div>
-                <p className="font-semibold text-white text-sm">Preferences</p>
-                <p className="text-slate-500 text-xs mt-0.5">Language, onboarding, and UI choices.</p>
+                <p className="font-semibold text-ink-950 text-sm">Preferences</p>
+                <p className="text-ink-400 text-xs mt-0.5">Language, onboarding, and UI choices.</p>
               </div>
               <input
                 type="checkbox"
@@ -123,8 +123,8 @@ export const CookieConsent = () => {
             </label>
             <label className="cookie-option">
               <div>
-                <p className="font-semibold text-white text-sm">Analytics</p>
-                <p className="text-slate-500 text-xs mt-0.5">Anonymous usage stats to improve our services.</p>
+                <p className="font-semibold text-ink-950 text-sm">Analytics</p>
+                <p className="text-ink-400 text-xs mt-0.5">Anonymous usage stats to improve our services.</p>
               </div>
               <input
                 type="checkbox"
@@ -136,9 +136,9 @@ export const CookieConsent = () => {
           </div>
         ) : null}
 
-        <p className="text-slate-500 text-[11px] sm:text-xs mb-4">
+        <p className="text-ink-400 text-[11px] sm:text-xs mb-4">
           Read our{' '}
-          <a href="/privacy-policy.html" className="text-blue-400 hover:text-blue-300 underline">
+          <a href="/privacy-policy.html" className="text-royal-600 hover:text-royal-700 underline">
             Privacy Policy
           </a>{' '}
           for details. Change choices anytime via &ldquo;Cookie settings&rdquo; in the footer.

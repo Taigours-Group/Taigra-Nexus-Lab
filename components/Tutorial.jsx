@@ -44,7 +44,7 @@ export const Tutorial = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-auto"
+        className="absolute inset-0 bg-ink-950/40 backdrop-blur-sm pointer-events-auto"
         onClick={handleComplete}
         aria-hidden
       />
@@ -52,32 +52,32 @@ export const Tutorial = () => {
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative w-full max-w-md nexus-card p-6 md:p-8 shadow-2xl pointer-events-auto ring-1 ring-blue-500/20"
+        className="relative w-full max-w-md nexus-card p-6 md:p-8 shadow-2xl pointer-events-auto ring-1 ring-royal-100"
         role="dialog"
         aria-labelledby="tutorial-title"
       >
         <button
           type="button"
           onClick={handleComplete}
-          className="absolute top-4 right-4 p-1 text-slate-500 hover:text-white rounded-lg transition-colors"
+          className="absolute top-4 right-4 p-1 text-ink-400 hover:text-ink-950 rounded-lg transition-colors"
           aria-label="Dismiss tour"
         >
           <X size={20} />
         </button>
 
         <div className="flex items-center gap-2 mb-4">
-          <div className="p-2 bg-blue-500/10 rounded-lg">
-            <Info className="text-blue-400 w-4 h-4" />
+          <div className="p-2 bg-royal-50 rounded-lg ring-1 ring-royal-100">
+            <Info className="text-royal-600 w-4 h-4" />
           </div>
-          <span className="text-xs font-semibold text-blue-400 uppercase tracking-wider">
+          <span className="text-xs font-semibold text-royal-600 uppercase tracking-wider">
             Quick tour · {currentStep + 1}/{TUTORIAL_STEPS.length}
           </span>
         </div>
 
-        <h3 id="tutorial-title" className="text-xl font-bold text-white mb-2">
+        <h3 id="tutorial-title" className="text-xl font-bold text-ink-950 mb-2">
           {step.title}
         </h3>
-        <p className="text-slate-400 text-sm leading-relaxed mb-6">{step.content}</p>
+        <p className="text-ink-500 text-sm leading-relaxed mb-6">{step.content}</p>
 
         <div className="flex items-center justify-between gap-4">
           <div className="flex gap-1.5">
@@ -85,7 +85,7 @@ export const Tutorial = () => {
               <div
                 key={i}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === currentStep ? 'w-6 bg-blue-500' : 'w-2 bg-white/15'
+                  i === currentStep ? 'w-6 bg-royal-600' : 'w-2 bg-ink-200'
                 }`}
               />
             ))}
