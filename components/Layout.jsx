@@ -88,13 +88,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-2">
-            <Link
-              id="admin-btn"
-              to="/admin/login"
-              className="text-xs font-medium text-ink-400 hover:text-ink-950 px-3 py-2 rounded-full hover:bg-ink-950/[0.04] transition-colors"
-            >
-              Admin
-            </Link>
+            
             <Link
               to="/contact"
               className="group inline-flex items-center gap-2 text-sm font-semibold text-white bg-royal-600 hover:bg-royal-700 rounded-full pl-5 pr-1.5 py-1.5 transition-colors shadow-[0_4px_16px_rgba(188,50,50,0.3)]"
@@ -154,12 +148,7 @@ const Navbar = () => {
                 >
                   Contact us <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link
-                  to="/admin/login"
-                  className="text-center text-sm text-ink-400 py-2 hover:text-ink-700"
-                >
-                  Admin login
-                </Link>
+                
               </div>
             </motion.div>
           )}
